@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-  <!-- Garis gelombang panjang — seperti coretan tangan -->
+  <!-- Garis gelombang panjang - seperti coretan tangan -->
   <path d="M0,14 Q20,4 40,14 Q60,24 80,14 Q100,4 120,14 Q140,24 160,14 Q180,4 200,14 Q220,24 240,14 Q260,4 280,14 Q300,24 320,14 Q340,4 360,14 Q380,24 400,14" stroke-width="2.5" data-draw="true"/>
 </svg>

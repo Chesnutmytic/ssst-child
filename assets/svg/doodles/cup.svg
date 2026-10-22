@@ -5,11 +5,11 @@
   <path d="M60,28 Q56,20 60,12 Q64,4 60,0" stroke-width="3" data-draw="true"/>
   <!-- Uap kopi 3 -->
   <path d="M82,30 Q78,22 82,14 Q86,6 82,0" stroke-width="3" data-draw="true"/>
-  <!-- Badan cangkir — sedikit tidak simetris -->
+  <!-- Badan cangkir - sedikit tidak simetris -->
   <path d="M22,45 Q20,80 23,96 Q28,110 60,112 Q92,110 97,96 Q100,80 98,45 Z" stroke-width="3" data-draw="true"/>
   <!-- Bibir cangkir -->
   <path d="M18,45 Q38,40 60,42 Q82,40 102,45" stroke-width="3" data-draw="true"/>
-  <!-- Gagang — organik -->
+  <!-- Gagang - organik -->
   <path d="M97,58 Q116,56 115,74 Q114,90 97,84" stroke-width="3" data-draw="true"/>
   <!-- Isi kopi di dalam -->
   <path d="M32,62 Q46,58 60,60 Q74,58 88,62" stroke-width="2" stroke-opacity="0.45" data-draw="true"/>
