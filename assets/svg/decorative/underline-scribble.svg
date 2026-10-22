@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <!-- Garis bawah coretan tangan — dua sapuan tidak rata -->
+  <path d="M0,5 Q50,2 100,6 Q150,10 200,5 Q250,2 300,5" stroke-width="3" data-draw="true"/>
+  <path d="M4,10 Q60,8 120,11 Q180,13 240,10 Q280,8 296,10" stroke-width="2" stroke-opacity="0.4" data-draw="true"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  <!-- Uap kiri -->
+  <path d="M12,75 Q8,62 12,50 Q16,38 12,26 Q8,14 12,4" stroke-width="3" data-draw="true"/>
+  <!-- Uap tengah -->
+  <path d="M30,78 Q26,65 30,53 Q34,41 30,29 Q26,17 30,7" stroke-width="3" data-draw="true"/>
+  <!-- Uap kanan -->
+  <path d="M48,75 Q44,62 48,50 Q52,38 48,26 Q44,14 48,4" stroke-width="3" data-draw="true"/>
+</svg>

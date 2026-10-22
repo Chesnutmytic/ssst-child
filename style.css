@@ -1,0 +1,22 @@
+/*
+Theme Name:        ssst Child
+Theme URI:         https://ssst.id
+Description:       Child theme untuk ssst Coffee Shop. Dibangun di atas Storefront (ringan, WooCommerce-native). Handwritten style, mobile-first. Hangat, personal, seperti catatan di buku menu kafe.
+Author:            ssst Team
+Author URI:        https://ssst.id
+Template:          storefront
+Version:           1.2.1
+Requires at least: 6.4
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       ssst-child
+Tags:              coffee, e-commerce, handwritten, woocommerce, indonesia
+*/
+
+/*
+  File ini hanya berisi header child theme.
+  Semua styling ada di assets/css/main.css (design tokens)
+  dan file CSS lain yang di-enqueue lewat functions.php.
+*/
+

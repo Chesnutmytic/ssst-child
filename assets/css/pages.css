@@ -1,0 +1,642 @@
+/* ============================================================
+   SSST - HALAMAN STATIS, BLOG, TOKO, 404
+   Dimuat di semua halaman setelah main.css & header-footer.css.
+   ============================================================ */
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   1. KERANGKA HALAMAN
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-page {
+    padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
+    background-color: var(--c-cream);
+    background-image:
+        radial-gradient(circle at 12% 8%, rgba(200, 118, 58, 0.06), transparent 42%),
+        radial-gradient(circle at 92% 0%, rgba(92, 61, 46, 0.05), transparent 38%);
+    background-repeat: no-repeat;
+}
+
+/* Header halaman */
+.ssst-page__header {
+    max-width: 780px;
+    margin: 0 auto clamp(2rem, 5vw, 3rem);
+    text-align: center;
+}
+
+.ssst-page__header--left {
+    margin-inline: 0;
+    text-align: left;
+}
+
+.ssst-page__eyebrow {
+    font-family: var(--font-hand);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+    color: var(--c-roast);
+}
+
+.ssst-page__title {
+    margin-top: 0.4rem;
+    font-family: var(--font-hand);
+    font-size: clamp(2.5rem, 6.5vw, 4rem);
+    line-height: 1.02;
+    color: var(--c-espresso);
+    text-wrap: balance;
+}
+
+.ssst-page__title::after {
+    content: "";
+    display: block;
+    width: clamp(96px, 26%, 190px);
+    height: 0.5rem;
+    margin: 0.55rem auto 0;
+    background: url("../svg/decorative/underline-scribble.svg") center / 100% 100% no-repeat;
+    opacity: 0.75;
+}
+
+.ssst-page__header--left .ssst-page__title::after {
+    margin-inline: 0;
+}
+
+.ssst-page__desc {
+    max-width: 620px;
+    margin: 0.85rem auto 0;
+    color: var(--c-roast);
+    line-height: 1.7;
+}
+
+.ssst-page__header--left .ssst-page__desc {
+    margin-inline: 0;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   2. KONTEN EDITOR (kartu kertas)
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-entry-content {
+    max-width: 860px;
+    margin-inline: auto;
+    padding: clamp(1.4rem, 4vw, 3rem);
+    background-color: var(--c-paper);
+    border: 2px solid var(--c-milk);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-ink);
+    color: var(--c-coffee);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    overflow-wrap: break-word;
+}
+
+.ssst-entry-content > * + * {
+    margin-top: 1.1em;
+}
+
+.ssst-entry-content h2,
+.ssst-entry-content h3,
+.ssst-entry-content h4 {
+    color: var(--c-espresso);
+    line-height: 1.2;
+}
+
+.ssst-entry-content h2 {
+    margin-top: 1.6em;
+    font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+}
+
+.ssst-entry-content h3 {
+    margin-top: 1.4em;
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
+}
+
+.ssst-entry-content h4 {
+    font-size: 1.25rem;
+}
+
+.ssst-entry-content p,
+.ssst-entry-content li {
+    color: var(--c-coffee);
+}
+
+.ssst-entry-content ul,
+.ssst-entry-content ol {
+    padding-left: 1.4em;
+}
+
+.ssst-entry-content ul {
+    list-style: disc;
+}
+
+.ssst-entry-content ol {
+    list-style: decimal;
+}
+
+.ssst-entry-content li + li {
+    margin-top: 0.45em;
+}
+
+.ssst-entry-content li::marker {
+    color: var(--c-caramel-dark);
+}
+
+.ssst-entry-content a {
+    color: var(--c-link);
+    font-weight: 600;
+}
+
+.ssst-entry-content strong {
+    color: var(--c-espresso);
+}
+
+.ssst-entry-content blockquote {
+    margin-block: 1.5em;
+    padding: 1.25em 1.4em;
+    background-color: var(--c-foam);
+    border-left: 4px solid var(--c-caramel);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-family: var(--font-hand);
+    font-size: 1.45rem;
+    line-height: 1.4;
+    color: var(--c-coffee);
+}
+
+.ssst-entry-content blockquote p {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.ssst-entry-content hr {
+    border: 0;
+    border-top: 2px dashed var(--c-latte);
+    margin-block: 2em;
+}
+
+.ssst-entry-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.ssst-entry-content th,
+.ssst-entry-content td {
+    padding: 0.7em 0.85em;
+    border-bottom: 1px solid var(--c-milk);
+    text-align: left;
+    vertical-align: top;
+}
+
+.ssst-entry-content th {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--c-espresso);
+    background-color: var(--c-foam);
+}
+
+.ssst-entry-content img {
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+.ssst-entry-content figure {
+    margin-block: 1.4em;
+}
+
+.ssst-entry-content figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--c-roast);
+    text-align: center;
+}
+
+/* Halaman WordPress bawaan */
+.ssst-page__comments {
+    max-width: 860px;
+    margin: 2.5rem auto 0;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   3. HALAMAN WOOCOMMERCE (cart, checkout, akun)
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-wc-page .ssst-entry-content {
+    max-width: none;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ssst-wc-page .ssst-page__header {
+    margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.ssst-wc-page .ssst-container {
+    max-width: var(--container-lg);
+}
+
+.ssst-wc-page .woocommerce {
+    font-size: 1rem;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   4. TOKO / KATALOG
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-shop-page .ssst-container {
+    max-width: 1240px;
+}
+
+.ssst-shop-breadcrumb {
+    margin-bottom: clamp(1rem, 3vw, 1.75rem);
+}
+
+.ssst-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--c-roast);
+}
+
+.ssst-breadcrumb a {
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+.ssst-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.ssst-breadcrumb__sep {
+    color: var(--c-latte);
+}
+
+.ssst-shop-hero {
+    max-width: 760px;
+    margin: 0 auto clamp(2rem, 5vw, 3rem);
+    text-align: center;
+}
+
+.ssst-shop-hero__desc {
+    max-width: 600px;
+    margin: 0.85rem auto 0;
+    color: var(--c-roast);
+    line-height: 1.7;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   5. BLOG & ARSIP
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-post-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    max-width: 1120px;
+    margin-inline: auto;
+}
+
+.ssst-post-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--c-paper);
+    border: 2px solid var(--c-milk);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--dur-base) var(--ease-spring),
+        box-shadow var(--dur-base) var(--ease-out);
+}
+
+.ssst-post-card:hover {
+    transform: translateY(-3px) rotate(-0.4deg);
+    box-shadow: var(--shadow-md);
+}
+
+.ssst-post-card__media {
+    display: block;
+    overflow: hidden;
+}
+
+.ssst-post-card__media img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.ssst-post-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.ssst-post-card__meta {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-roast);
+}
+
+.ssst-post-card__title {
+    font-family: var(--font-hand);
+    font-size: 1.75rem;
+    line-height: 1.15;
+}
+
+.ssst-post-card__title a {
+    color: var(--c-espresso);
+    text-decoration: none;
+}
+
+.ssst-post-card__title a:hover {
+    color: var(--c-link);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.ssst-post-card__excerpt {
+    font-size: 0.95rem;
+    color: var(--c-roast);
+}
+
+.ssst-post-card__more {
+    margin-top: auto;
+    padding-top: 0.35rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+.ssst-post-card__more:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.ssst-pagination {
+    margin-top: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+}
+
+.ssst-pagination .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.ssst-pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.25rem 0.9rem;
+    background-color: var(--c-paper);
+    border: 2px solid var(--c-milk);
+    border-radius: 50% 44% 50% 44%;
+    color: var(--c-coffee);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color var(--dur-fast), border-color var(--dur-fast);
+}
+
+.ssst-pagination .page-numbers:hover {
+    border-color: var(--c-caramel);
+    color: var(--c-espresso);
+}
+
+.ssst-pagination .page-numbers.current {
+    background-color: var(--c-espresso);
+    border-color: var(--c-espresso);
+    color: var(--c-cream);
+}
+
+/* Empty state */
+.ssst-empty-state {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    max-width: 560px;
+    margin-inline: auto;
+    padding: clamp(2rem, 5vw, 3rem) 1.5rem;
+    text-align: center;
+    background-color: var(--c-paper);
+    border: 2px dashed var(--c-latte);
+    border-radius: var(--radius-lg);
+    color: var(--c-roast);
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   6. PENCARIAN
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-page__search,
+.ssst-404__search {
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+}
+
+.search-form {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.search-field {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0.65rem 1rem;
+    background-color: var(--c-paper);
+    border: 2px solid var(--c-milk);
+    border-radius: var(--radius-md);
+    color: var(--c-espresso);
+    font-size: 1rem;
+}
+
+.search-field:focus {
+    outline: none;
+    border-color: var(--c-caramel);
+    box-shadow: 0 0 0 3px var(--c-caramel-ghost);
+}
+
+.search-submit {
+    flex: 0 0 auto;
+    min-height: 48px;
+    padding: 0.55rem 1.35rem;
+    background-color: var(--c-espresso);
+    border: 2px solid var(--c-espresso);
+    border-radius: var(--radius-md);
+    color: var(--c-cream);
+    font-family: var(--font-hand);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--dur-fast);
+}
+
+.search-submit:hover {
+    background-color: var(--c-coffee);
+}
+
+/* Screen reader text bawaan WordPress */
+.screen-reader-text {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   7. SATU TULISAN
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-single__media {
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    border: 2px solid var(--c-milk);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-ink);
+}
+
+.ssst-single__media img {
+    width: 100%;
+    height: auto;
+}
+
+.ssst-single__footer {
+    max-width: 860px;
+    margin: 2rem auto 0;
+}
+
+.ssst-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.ssst-tags a {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--c-foam);
+    border: 1px solid var(--c-milk);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ssst-post-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--c-latte);
+    font-family: var(--font-hand);
+    font-size: 1.25rem;
+}
+
+.ssst-post-nav a {
+    text-decoration: none;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   8. 404
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-404__inner {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.ssst-404__doodle svg {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 1rem;
+    color: var(--c-caramel);
+    opacity: 0.85;
+}
+
+.ssst-404__code {
+    font-family: var(--font-hand);
+    font-size: clamp(5rem, 18vw, 9rem);
+    line-height: 0.85;
+    color: var(--c-espresso);
+}
+
+.ssst-404__text {
+    max-width: 460px;
+    margin: 1.25rem auto 1.75rem;
+    color: var(--c-roast);
+}
+
+.ssst-404__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   9. KOMENTAR
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ssst-page__comments .comments-title,
+.ssst-page__comments .comment-reply-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ssst-page__comments ol {
+    list-style: none;
+    padding: 0;
+}
+
+.ssst-page__comments .comment-body {
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--c-milk);
+}
+
+.ssst-page__comments .comment-meta {
+    font-size: 0.85rem;
+    color: var(--c-roast);
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   10. RESPONSIF
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (min-width: 640px) {
+    .ssst-post-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .ssst-post-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-submit {
+        width: 100%;
+    }
+
+    .ssst-404__actions .btn {
+        width: 100%;
+    }
+}
+

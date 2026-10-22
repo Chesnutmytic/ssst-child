@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  <!-- Biji kopi — outline organik -->
+  <path d="M40,5 Q65,5 70,40 Q65,78 40,78 Q15,78 10,40 Q15,5 40,5 Z" stroke-width="3" data-draw="true"/>
+  <!-- Lekukan tengah (ceruk biji kopi) — dua kurva -->
+  <path d="M40,8 Q32,22 31,40 Q32,58 40,75" stroke-width="2" data-draw="true"/>
+  <path d="M40,8 Q48,22 49,40 Q48,58 40,75" stroke-width="2" data-draw="true"/>
+</svg>
